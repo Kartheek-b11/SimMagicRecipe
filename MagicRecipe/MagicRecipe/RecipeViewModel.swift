@@ -42,10 +42,10 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
 	}
 	
 	public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cityCell = tableView.dequeueReusableCell(withIdentifier: "RecipesTableViewCell", for: indexPath) as! RecipesTableViewCell
+		let recipeCell = tableView.dequeueReusableCell(withIdentifier: "RecipesTableViewCell", for: indexPath) as! RecipesTableViewCell
 		let recep = recipes.recipeObjects[indexPath.row]
-		cityCell.configureCell(viewModel: recep)
-		return cityCell
+		recipeCell.configureCell(viewModel: recep)
+		return recipeCell
 	}
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let detail = self.storyboard?.instantiateViewController(withIdentifier: "DetailVC")as! DetailsViewController
