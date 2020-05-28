@@ -98,45 +98,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gB5-He-LvC">
-                                <rect key="frame" x="0.0" y="268" width="414" height="414"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gB5-He-LvC" secondAttribute="height" multiplier="1:1" id="far-q2-seQ"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MR2-FI-g0J">
-                                <rect key="frame" x="15" y="721.5" width="384" height="23.5"/>
+                                <rect key="frame" x="15" y="598.5" width="384" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ingredients" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFS-lN-lo0">
-                                <rect key="frame" x="15" y="692" width="384" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFS-lN-lo0">
+                                <rect key="frame" x="15" y="569" width="384" height="19.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.48627450979999998" green="0.56078431370000004" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jk-xL-ZAC">
-                                <rect key="frame" x="15" y="229.5" width="384" height="23.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jk-xL-ZAC">
+                                <rect key="frame" x="15" y="517" width="384" height="37"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="MR2-FI-g0J" firstAttribute="top" secondItem="HFS-lN-lo0" secondAttribute="bottom" constant="10" id="2Qm-n3-Cym"/>
-                            <constraint firstItem="S5w-PK-cyX" firstAttribute="trailing" secondItem="MR2-FI-g0J" secondAttribute="trailing" constant="15" id="41i-ba-HIn"/>
-                            <constraint firstItem="gB5-He-LvC" firstAttribute="centerY" secondItem="S5w-PK-cyX" secondAttribute="centerY" id="7mV-oo-Nho"/>
-                            <constraint firstItem="HFS-lN-lo0" firstAttribute="top" secondItem="gB5-He-LvC" secondAttribute="bottom" constant="10" id="B8U-8s-Nnn"/>
+                            <constraint firstItem="HFS-lN-lo0" firstAttribute="top" secondItem="3jk-xL-ZAC" secondAttribute="bottom" constant="15" id="BNm-kb-Eta"/>
+                            <constraint firstItem="3jk-xL-ZAC" firstAttribute="top" secondItem="gB5-He-LvC" secondAttribute="bottom" constant="15" id="F3B-PI-Jo2"/>
+                            <constraint firstItem="MR2-FI-g0J" firstAttribute="top" secondItem="HFS-lN-lo0" secondAttribute="bottom" constant="10" id="Hdc-Ix-5Xg"/>
                             <constraint firstItem="3jk-xL-ZAC" firstAttribute="centerX" secondItem="S5w-PK-cyX" secondAttribute="centerX" id="Kpl-TZ-hgw"/>
                             <constraint firstItem="3jk-xL-ZAC" firstAttribute="leading" secondItem="S5w-PK-cyX" secondAttribute="leading" constant="15" id="OuT-Sw-hAY"/>
                             <constraint firstItem="S5w-PK-cyX" firstAttribute="trailing" secondItem="gB5-He-LvC" secondAttribute="trailing" id="WhV-2v-FzY"/>
+                            <constraint firstItem="gB5-He-LvC" firstAttribute="top" secondItem="S5w-PK-cyX" secondAttribute="top" id="Xq9-Yx-QF3"/>
                             <constraint firstItem="MR2-FI-g0J" firstAttribute="centerX" secondItem="S5w-PK-cyX" secondAttribute="centerX" id="YvW-i0-9il"/>
                             <constraint firstItem="gB5-He-LvC" firstAttribute="leading" secondItem="S5w-PK-cyX" secondAttribute="leading" id="aMY-rb-7pC"/>
                             <constraint firstItem="S5w-PK-cyX" firstAttribute="trailing" secondItem="HFS-lN-lo0" secondAttribute="trailing" constant="15" id="erM-WL-eY7"/>
                             <constraint firstItem="HFS-lN-lo0" firstAttribute="leading" secondItem="S5w-PK-cyX" secondAttribute="leading" constant="15" id="lB5-HP-kRz"/>
-                            <constraint firstItem="S5w-PK-cyX" firstAttribute="trailing" secondItem="3jk-xL-ZAC" secondAttribute="trailing" constant="15" id="lu2-jJ-TbQ"/>
-                            <constraint firstItem="gB5-He-LvC" firstAttribute="top" secondItem="3jk-xL-ZAC" secondAttribute="bottom" constant="15" id="tbE-qW-3cH"/>
                             <constraint firstItem="MR2-FI-g0J" firstAttribute="leading" secondItem="S5w-PK-cyX" secondAttribute="leading" constant="15" id="xsp-wu-h39"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S5w-PK-cyX"/>
