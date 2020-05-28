@@ -22,8 +22,9 @@ class RecipesTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-//	func configureCell(viewModel : RecipeViewModel){
-//		self.titleLabel.text = viewModel
-//	}
+	func configureCell(viewModel : RecipeElement){
+		self.titleLabel.text = viewModel.title ?? ""
+		receipeImageView.imageFromURL(urlString: viewModel.thumbnail ?? "")
+	}
     
 }

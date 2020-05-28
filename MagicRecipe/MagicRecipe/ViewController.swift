@@ -8,30 +8,44 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+class ViewController: UIViewController{
 
 	@IBOutlet var recipes : RecipeViewModel!
 	@IBOutlet var recipeTableView : UITableView!
+	@IBOutlet var ingridentTF : UITextField!
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 		recipeTableView.register(UINib(nibName: "RecipesTableViewCell", bundle: nil), forCellReuseIdentifier: "RecipesTableViewCell")
-		recipes.fetchRecipes {
+		ingridentTF.text = "onions,garlic"
+		loadData()
+		
+	}
+	fileprivate func loadData(isPagging:Bool = false) {
+		if !isPagging {
+			recipes.recipeObjects = []
+		}
+		recipes.ingredients = ingridentTF.text ?? ""
+		recipes.fetchRecipes { (success) in
+			DispatchQueue.main.async {
+				self.recipeTableView.reloadData()
+			}
 			
-			self.recipeTableView.reloadData()
 		}
 	}
-
-	public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return recipes.numberOfItemsInSection(section: section)
-	}
 	
-	public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cityCell = tableView.dequeueReusableCell(withIdentifier: "RecipesTableViewCell", for: indexPath) as! RecipesTableViewCell
-		let city = recipes.
-		print("\(city)")
+	@IBAction func searchAction(_ sender:UIButton){
+		self.view.endEditing(true)
+		loadData()
 	}
-	
-
 }
-
+extension ViewController:UITextFieldDelegate{
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		self.searchAction(UIButton())
+		return true
+	}
+	func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+		recipes.page += 1
+		loadData(isPagging: true)
+	}
+}

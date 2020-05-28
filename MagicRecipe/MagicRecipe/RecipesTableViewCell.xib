@@ -25,10 +25,10 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uUr-vT-Ye3">
-                        <rect key="frame" x="105" y="50" width="200" height="0.0"/>
+                        <rect key="frame" x="105" y="10" width="200" height="80"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aT-6e-J38">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aT-6e-J38">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,6 +42,8 @@
                     <constraint firstAttribute="bottom" secondItem="t7R-cP-AzQ" secondAttribute="bottom" constant="10" id="5wi-2C-7bf"/>
                     <constraint firstItem="t7R-cP-AzQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="73r-iq-Pcw"/>
                     <constraint firstAttribute="trailing" secondItem="uUr-vT-Ye3" secondAttribute="trailing" constant="15" id="jk8-ww-gsr"/>
+                    <constraint firstItem="uUr-vT-Ye3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="kF2-5G-JB6"/>
+                    <constraint firstAttribute="bottom" secondItem="uUr-vT-Ye3" secondAttribute="bottom" constant="10" id="lEI-zL-A73"/>
                     <constraint firstItem="t7R-cP-AzQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="oxQ-g4-CL9"/>
                 </constraints>
             </tableViewCellContentView>
